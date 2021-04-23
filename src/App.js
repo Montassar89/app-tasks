@@ -22,7 +22,7 @@ function App() {
 
       <Breadcrumb>
       <BreadcrumbItem>Home</BreadcrumbItem>
-        <BreadcrumbItem active><a href="#">Tâches</a></BreadcrumbItem>
+        <BreadcrumbItem active><a href="/#">Tâches</a></BreadcrumbItem>
         <BreadcrumbItem ><a onClick={() => logout()} role="button">Déconnexion</a></BreadcrumbItem>
       </Breadcrumb>
     </div>
