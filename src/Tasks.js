@@ -61,9 +61,7 @@ const Tasks = (props) => {
     register,
     formState: { errors },
     handleSubmit,
-    control,
     setValue,
-    reset,
   } = useForm({ mode: "onBlur" });
   const updatetask = (task, index) => {
     setIndex(index);
@@ -112,7 +110,7 @@ const Tasks = (props) => {
                   <th>
                     <span
                       className={`${
-                        task.state == "complétée"
+                        task.state === "complétée"
                           ? "text-success"
                           : "text-danger"
                       }`}
@@ -194,7 +192,7 @@ const Tasks = (props) => {
                 </tr>
               );
             })}
-          {tasks.length == 0 && (
+          {tasks.length === 0 && (
             <tr>
               <th scope="row" colSpan="4" className="text-center">
                 Empty List

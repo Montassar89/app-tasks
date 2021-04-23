@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import React from 'react';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { useForm } from 'react-hook-form';
 
 import { ToastContainer, toast } from "react-toastify";
@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 export default function Login({ setToken }) {
   const { register, formState: { errors } , handleSubmit } = useForm();
   const onSubmit = (data) => {
-    if(data.email == "test@test.com" && data.password == "test"){
+    if(data.email === "test@test.com" && data.password === "test"){
       setToken("test2021");
       localStorage.setItem('user', JSON.stringify(data.email));
     }
