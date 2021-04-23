@@ -195,7 +195,7 @@ const Tasks = (props) => {
           {tasks.length === 0 && (
             <tr>
               <th scope="row" colSpan="4" className="text-center">
-                Empty List
+              Liste vide!
               </th>
             </tr>
           )}

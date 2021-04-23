@@ -27,7 +27,7 @@ export default function Login({ setToken }) {
         <Input type="email" name="email"
          id="exampleEmail" placeholder=""
          {...register('email', {
-          required: 'This is a required',
+          required: 'Ceci est obligatoire',
           pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
         })} />
         <div className="text-danger">{errors.email && errors.email.message}</div>
@@ -36,7 +36,7 @@ export default function Login({ setToken }) {
         <Label for="examplePassword">Password</Label>
         <Input type="password" 
          {...register('password', {
-          required: 'This is a required',
+          required: 'Ceci est obligatoire',
         })}
         name="password" id="examplePassword" placeholder="" />
         <div className="text-danger">{errors.password && errors.password.message}</div>
