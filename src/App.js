@@ -1,23 +1,40 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Login from './Login';
+import useToken from './useToken';
+import Tasks from './Tasks';
+import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 
 function App() {
+  const logout = () =>{
+    setToken()
+    localStorage.removeItem('token')
+  }
+  const { token, setToken } = useToken();
+  if(!token) {
+    return <Login setToken={setToken} />
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <div className="w-75 mx-auto mt-4"> 
+
+
+      <Breadcrumb>
+      <BreadcrumbItem>Home</BreadcrumbItem>
+        <BreadcrumbItem active><a href="#">Tâches</a></BreadcrumbItem>
+        <BreadcrumbItem ><a onClick={() => logout()} role="button">Déconnexion</a></BreadcrumbItem>
+      </Breadcrumb>
+    </div>
+      <Tasks />
+      {/* <BrowserRouter>
+        <Switch>
+          <Route path="/tasks">
+            <Tasks />
+          </Route>
+        </Switch>
+      </BrowserRouter> */}
     </div>
   );
 }
