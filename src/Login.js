@@ -28,7 +28,6 @@ export default function Login({ setToken }) {
          id="exampleEmail" placeholder=""
          {...register('email', {
           required: 'This is a required',
-          pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
         })} />
         <div className="text-danger">{errors.email && errors.email.message}</div>
       </FormGroup>

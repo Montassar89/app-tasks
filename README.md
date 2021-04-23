@@ -2,7 +2,7 @@
 
 Dans le répertoire du projet, vous pouvez exécuter:
 
-### `yarn start`
+### `yarn && yarn start`
 
 Exécute l'application en mode développement. \
 Ouvrez [http: // localhost: 3000] (http: // localhost: 3000) pour l'afficher dans le navigateur.
